@@ -175,22 +175,21 @@ footer a{color:var(--cream)}
    НАСТРОЙКА. Здесь меняются два значения — больше ничего править не нужно.
 
    FORM_URL   — адрес Яндекс Формы целиком, вместе с https:// и слэшем в конце.
-   CLUB_PARAM — имя поля «Кружок» в этой форме, чтобы название подставлялось
-                автоматически. Как узнать: открыть форму, нажать «Поделиться» →
-                «Предзаполнить поля», выбрать поле «Кружок», ввести любой текст,
-                получить ссылку вида
-                https://forms.yandex.ru/u/XXXX/?answer_short_text_12345=тест
-                Строка answer_short_text_12345 и есть CLUB_PARAM.
+   CLUB_PARAM — имя поля «Кружок» в этой форме. Поле сделано выпадающим списком,
+                поэтому подставляется не название, а номер варианта: он лежит
+                у каждого кружка в поле form. Если добавляете кружок в форму —
+                сгенерируйте для него предзаполненную ссылку и впишите номер
+                из неё в поле form соответствующего кружка ниже.
 
    Если CLUB_PARAM оставить пустым, форма всё равно работает — студент просто
    выберет кружок сам.
    ========================================================================== */
 const FORM_URL   = 'https://forms.yandex.ru/u/6a9860e06d2d7329ce0ab9d6/';
-const CLUB_PARAM = '';
+const CLUB_PARAM = 'answer_choices_9008987626320228';
 
 /* Отдельная форма для записи в актив СНО. Пока пусто — блок «Актив СНО»
    показывает пояснение вместо кнопки. */
-const AKTIV_FORM_URL = '';
+const AKTIV_FORM_URL = 'https://forms.yandex.ru/u/6a9d2cc302848fa36e604a90/';
 
 /* ========================================================================== */
 
@@ -203,7 +202,8 @@ const CLUBS = [
   "chair": "Колодяжная Анна",
   "links": [],
   "handles": [],
-  "page": ""
+  "page": "",
+  "form": "1788616360617"
  },
  {
   "name": "Modern English in communicaton: hedge to success",
@@ -218,7 +218,8 @@ const CLUBS = [
    }
   ],
   "handles": [],
-  "page": "https://science.linguanet.ru/modern-english-in-communication-hedge-to-success/"
+  "page": "https://science.linguanet.ru/modern-english-in-communication-hedge-to-success/",
+  "form": "1788616335855"
  },
  {
   "name": "OMG today means…Oh, my game!",
@@ -233,7 +234,8 @@ const CLUBS = [
    }
   ],
   "handles": [],
-  "page": "https://science.linguanet.ru/omg/"
+  "page": "https://science.linguanet.ru/omg/",
+  "form": "1788616344146"
  },
  {
   "name": "Politterra cognita",
@@ -248,7 +250,8 @@ const CLUBS = [
    }
   ],
   "handles": [],
-  "page": "https://science.linguanet.ru/politterra-cognita/"
+  "page": "https://science.linguanet.ru/politterra-cognita/",
+  "form": "1788616370672"
  },
  {
   "name": "Sapere aude",
@@ -263,7 +266,8 @@ const CLUBS = [
    }
   ],
   "handles": [],
-  "page": "https://science.linguanet.ru/sapere-aude/"
+  "page": "https://science.linguanet.ru/sapere-aude/",
+  "form": "1788616378628"
  },
  {
   "name": "Scientia potentia est",
@@ -273,7 +277,8 @@ const CLUBS = [
   "chair": "Щедрин Сергей Владимирович",
   "links": [],
   "handles": [],
-  "page": ""
+  "page": "",
+  "form": "1788371900330"
  },
  {
   "name": "The English through centuries: there and back again",
@@ -283,7 +288,8 @@ const CLUBS = [
   "chair": "Победимская Арина Игоревна, Золин Максим Романович",
   "links": [],
   "handles": [],
-  "page": "https://science.linguanet.ru/the-english-through-centuries-there-and-back-again/"
+  "page": "https://science.linguanet.ru/the-english-through-centuries-there-and-back-again/",
+  "form": "1788371913301"
  },
  {
   "name": "Агенты национальной безопасности",
@@ -298,7 +304,8 @@ const CLUBS = [
    }
   ],
   "handles": [],
-  "page": "https://science.linguanet.ru/агенты-национальной-безопасности/"
+  "page": "https://science.linguanet.ru/агенты-национальной-безопасности/",
+  "form": "1788371937292"
  },
  {
   "name": "Академические ассистенты",
@@ -313,7 +320,8 @@ const CLUBS = [
    }
   ],
   "handles": [],
-  "page": ""
+  "page": "",
+  "form": "1788371945978"
  },
  {
   "name": "Актуальные вопросы итальянистики",
@@ -323,7 +331,8 @@ const CLUBS = [
   "chair": "",
   "links": [],
   "handles": [],
-  "page": ""
+  "page": "",
+  "form": "1788371953451"
  },
  {
   "name": "Актуальные вопросы религии",
@@ -342,7 +351,8 @@ const CLUBS = [
    }
   ],
   "handles": [],
-  "page": "https://science.linguanet.ru/актуальные-вопросы-религии/"
+  "page": "https://science.linguanet.ru/актуальные-вопросы-религии/",
+  "form": "1788371961311"
  },
  {
   "name": "Беседы о немецком слове",
@@ -357,7 +367,8 @@ const CLUBS = [
    }
   ],
   "handles": [],
-  "page": "https://science.linguanet.ru/беседы-о-немецком-слове/"
+  "page": "https://science.linguanet.ru/беседы-о-немецком-слове/",
+  "form": "1788372133025"
  },
  {
   "name": "Закон и порядок",
@@ -372,7 +383,8 @@ const CLUBS = [
    }
   ],
   "handles": [],
-  "page": "https://science.linguanet.ru/закон-и-порядок/"
+  "page": "https://science.linguanet.ru/закон-и-порядок/",
+  "form": "1788372212880"
  },
  {
   "name": "Калейдоскоп",
@@ -391,7 +403,8 @@ const CLUBS = [
    }
   ],
   "handles": [],
-  "page": "https://science.linguanet.ru/калейдоскоп/"
+  "page": "https://science.linguanet.ru/калейдоскоп/",
+  "form": "1788372228642"
  },
  {
   "name": "Клуб когнитивной грамматики",
@@ -406,7 +419,8 @@ const CLUBS = [
    }
   ],
   "handles": [],
-  "page": "https://science.linguanet.ru/клуб-когнитивной-грамматики/"
+  "page": "https://science.linguanet.ru/клуб-когнитивной-грамматики/",
+  "form": "1788627557913"
  },
  {
   "name": "Когнитивные мосты",
@@ -416,7 +430,8 @@ const CLUBS = [
   "chair": "",
   "links": [],
   "handles": [],
-  "page": ""
+  "page": "",
+  "form": "1788372244851"
  },
  {
   "name": "Когниция. Культура. Коммуникация",
@@ -426,7 +441,8 @@ const CLUBS = [
   "chair": "",
   "links": [],
   "handles": [],
-  "page": "https://science.linguanet.ru/когниция-культура-коммуникация/"
+  "page": "https://science.linguanet.ru/когниция-культура-коммуникация/",
+  "form": "1788372253949"
  },
  {
   "name": "Корпусная лингвистика на ФФЯ",
@@ -441,7 +457,8 @@ const CLUBS = [
    }
   ],
   "handles": [],
-  "page": "https://science.linguanet.ru/корпусная-лингвистика-французский-я/"
+  "page": "https://science.linguanet.ru/корпусная-лингвистика-французский-я/",
+  "form": "1788372265940"
  },
  {
   "name": "кружок практической фонетики и страноведения Великобритании",
@@ -451,7 +468,8 @@ const CLUBS = [
   "chair": "",
   "links": [],
   "handles": [],
-  "page": "https://science.linguanet.ru/научно-практический-кружок-практиче/"
+  "page": "https://science.linguanet.ru/научно-практический-кружок-практиче/",
+  "form": "1788627624856"
  },
  {
   "name": "Кружок художественного перевода корейской литературы",
@@ -461,7 +479,8 @@ const CLUBS = [
   "chair": "Кормышева Татьяна",
   "links": [],
   "handles": [],
-  "page": "https://science.linguanet.ru/кружок-художественного-перевода-кор/"
+  "page": "https://science.linguanet.ru/кружок-художественного-перевода-кор/",
+  "form": "1788372366025"
  },
  {
   "name": "Культурный слой",
@@ -480,7 +499,8 @@ const CLUBS = [
    }
   ],
   "handles": [],
-  "page": "https://science.linguanet.ru/культурный-слой/"
+  "page": "https://science.linguanet.ru/культурный-слой/",
+  "form": "1788372374498"
  },
  {
   "name": "Латинский клуб",
@@ -499,7 +519,8 @@ const CLUBS = [
    }
   ],
   "handles": [],
-  "page": "https://science.linguanet.ru/латинский-клуб-мглу/"
+  "page": "https://science.linguanet.ru/латинский-клуб-мглу/",
+  "form": "1788371819541"
  },
  {
   "name": "ЛингвоСодружество",
@@ -509,7 +530,8 @@ const CLUBS = [
   "chair": "",
   "links": [],
   "handles": [],
-  "page": ""
+  "page": "",
+  "form": "1788627615239"
  },
  {
   "name": "ЛитКлуб",
@@ -519,7 +541,8 @@ const CLUBS = [
   "chair": "Гребенников Вадим Олегович",
   "links": [],
   "handles": [],
-  "page": "https://science.linguanet.ru/литклуб-мглу/"
+  "page": "https://science.linguanet.ru/литклуб-мглу/",
+  "form": "1788372388638"
  },
  {
   "name": "Мастерская (аудио)визуальной доступности",
@@ -534,7 +557,8 @@ const CLUBS = [
    }
   ],
   "handles": [],
-  "page": "https://science.linguanet.ru/мастерская-аудиовизуальной-доступн/"
+  "page": "https://science.linguanet.ru/мастерская-аудиовизуальной-доступн/",
+  "form": "1788616178610"
  },
  {
   "name": "Миры социологии",
@@ -549,7 +573,8 @@ const CLUBS = [
    }
   ],
   "handles": [],
-  "page": "https://science.linguanet.ru/миры-социологии/"
+  "page": "https://science.linguanet.ru/миры-социологии/",
+  "form": "1788616197428"
  },
  {
   "name": "Мультимодальная коммуникация в разных видах дискурса",
@@ -559,7 +584,8 @@ const CLUBS = [
   "chair": "будет назначен осенью",
   "links": [],
   "handles": [],
-  "page": "https://science.linguanet.ru/мультимодальная-коммуникация-в-разн/"
+  "page": "https://science.linguanet.ru/мультимодальная-коммуникация-в-разн/",
+  "form": "1788616207735"
  },
  {
   "name": "Научно-практический клуб PSYSPEAK",
@@ -582,7 +608,8 @@ const CLUBS = [
    }
   ],
   "handles": [],
-  "page": ""
+  "page": "",
+  "form": "1788616352730"
  },
  {
   "name": "Неофилология",
@@ -592,7 +619,8 @@ const CLUBS = [
   "chair": "",
   "links": [],
   "handles": [],
-  "page": ""
+  "page": "",
+  "form": "1788616217219"
  },
  {
   "name": "Правосудие без границ",
@@ -607,7 +635,8 @@ const CLUBS = [
    }
   ],
   "handles": [],
-  "page": "https://science.linguanet.ru/правосудие-без-границ/"
+  "page": "https://science.linguanet.ru/правосудие-без-границ/",
+  "form": "1788616229488"
  },
  {
   "name": "Практика ораторского мастерства",
@@ -622,7 +651,8 @@ const CLUBS = [
    }
   ],
   "handles": [],
-  "page": "https://science.linguanet.ru/практика-ораторского-мастерства/"
+  "page": "https://science.linguanet.ru/практика-ораторского-мастерства/",
+  "form": "1788616240944"
  },
  {
   "name": "Проект по переводу военных документов Второй мировой войны \"Без срока давности\"",
@@ -632,7 +662,8 @@ const CLUBS = [
   "chair": "Ивочкина Влада",
   "links": [],
   "handles": [],
-  "page": "https://science.linguanet.ru/без-срока-давности/"
+  "page": "https://science.linguanet.ru/без-срока-давности/",
+  "form": "1788616250000"
  },
  {
   "name": "Семинар по переводу русской поэзии на английском языке",
@@ -642,7 +673,8 @@ const CLUBS = [
   "chair": "",
   "links": [],
   "handles": [],
-  "page": ""
+  "page": "",
+  "form": "1788616262920"
  },
  {
   "name": "Слово и жест",
@@ -657,7 +689,8 @@ const CLUBS = [
    }
   ],
   "handles": [],
-  "page": ""
+  "page": "",
+  "form": "1788616272313"
  },
  {
   "name": "Современные методы ревитализации, сохранения и документирования исчезающих языков",
@@ -667,7 +700,8 @@ const CLUBS = [
   "chair": "",
   "links": [],
   "handles": [],
-  "page": ""
+  "page": "",
+  "form": "1788616280603"
  },
  {
   "name": "Цивилист",
@@ -682,7 +716,8 @@ const CLUBS = [
    }
   ],
   "handles": [],
-  "page": "https://science.linguanet.ru/цивилист/"
+  "page": "https://science.linguanet.ru/цивилист/",
+  "form": "1788616290654"
  },
  {
   "name": "Эвфемия и дисфемия в мужкультурной коммуникации",
@@ -692,7 +727,8 @@ const CLUBS = [
   "chair": "Мищенко Елизавета",
   "links": [],
   "handles": [],
-  "page": ""
+  "page": "",
+  "form": "1788616299190"
  },
  {
   "name": "Элементы математической логики и технической кибернетики",
@@ -702,7 +738,8 @@ const CLUBS = [
   "chair": "Шубин Тимофей Ильич",
   "links": [],
   "handles": [],
-  "page": ""
+  "page": "",
+  "form": "1788616307018"
  },
  {
   "name": "Язык и культура",
@@ -717,7 +754,8 @@ const CLUBS = [
    }
   ],
   "handles": [],
-  "page": "https://science.linguanet.ru/язык-и-культура-language-and-culture/"
+  "page": "https://science.linguanet.ru/язык-и-культура-language-and-culture/",
+  "form": "1788616316978"
  },
  {
   "name": "Язык, культура, игра: мастерская игрового обучения",
@@ -732,7 +770,8 @@ const CLUBS = [
    }
   ],
   "handles": [],
-  "page": "https://science.linguanet.ru/язык-культура-игра/"
+  "page": "https://science.linguanet.ru/язык-культура-игра/",
+  "form": "1788616326511"
  }
 ];
 
@@ -759,11 +798,11 @@ const CLUBS = [
     ? `<a class="join" href="${esc(AKTIV_FORM_URL)}" target="_blank" rel="noopener">Подать заявку в актив</a>`
     : `<div class="notset">Набор в актив открывается — форма заявки появится здесь в ближайшие дни.</div>`;
 
-  function formLink(club) {
+  function formLink(c) {
     if (!FORM_URL) return '#signup';
-    if (!CLUB_PARAM) return FORM_URL;
+    if (!CLUB_PARAM || !c.form) return FORM_URL;
     const sep = FORM_URL.includes('?') ? '&' : '?';
-    return FORM_URL + sep + CLUB_PARAM + '=' + encodeURIComponent(club);
+    return FORM_URL + sep + CLUB_PARAM + '=' + encodeURIComponent(c.form);
   }
 
   function card(c) {
@@ -774,7 +813,7 @@ const CLUBS = [
     if (!parts.length) parts.push('<span class="nolink">Сообщество — ссылка появится позже</span>');
 
     const chair = c.chair && !/будет назначен|председателя нет/i.test(c.chair) ? esc(c.chair) : 'назначается';
-    const href  = formLink(c.name);
+    const href  = formLink(c);
     const blank = FORM_URL ? ' target="_blank" rel="noopener"' : '';
 
     return `<article class="card">
